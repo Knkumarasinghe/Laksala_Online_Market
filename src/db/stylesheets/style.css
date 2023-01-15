@@ -1,0 +1,315 @@
+body{
+    padding-top: 70px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  text-transform: capitalize;
+
+}
+
+footer {
+  background-color: rgb(58, 58, 58);
+  margin-top: 300px;
+}
+.container {
+  margin-left: 150px;
+  margin-right: 150px;
+}
+.container .content {
+  display: flex;
+  padding: 50px;
+  justify-content: space-between;
+}
+.container .content .col {
+  display: flex;
+  flex-direction: column;
+}
+.container .content p:first-child:not(.flex p:first-child) {
+  color: white;
+  font-size: 22px;
+}
+.container .content p:not(.col, .column p:first-child) {
+  color: rgb(136, 136, 136);
+  margin-bottom: 10px;
+}
+.container .content .col:first-child {
+  gap: 25px;
+}
+.container .content .col:first-child .flex {
+  display: flex;
+  gap: 50px;
+}
+.container .content .col:first-child .flex .col-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container .content .col:first-child .flex .col-info p {
+  font-size: 14px;
+}
+.container .content .col:first-child .flex .col-info span {
+  color: white;
+  font-size: 17px;
+}
+.container .content .col .column:first-child {
+  margin-right: 50px;
+}
+
+.container .content .col .column p:first-child {
+  margin-bottom: 25px;
+}
+.container .content .col .column p:not(p:first-child) {
+  margin-bottom: 12px;
+}
+.container .content .col:last-child {
+  gap: 15px;
+}
+.container .content .col:last-child .email {
+  display: flex;
+}
+.container .content .col:last-child .email input {
+  width: 300px;
+  height: 40px;
+  font-size: 18px;
+  color: white;
+  background-color: rgb(76, 76, 76);
+  padding-left: 10px;
+  border: 0;
+  outline: 0;
+}
+.container .content .col:last-child .email button {
+  width: 200px;
+  height: 40px;
+  color: white;
+  background-color: rgb(229, 39, 39);
+  padding-left: 10px;
+  border: 0;
+  outline: 0;
+  text-align: center;
+  margin-left: -30px;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+}
+.container .content .col:last-child .social {
+  display: flex;
+  gap: 20px;
+}
+.container .content .col:last-child .social img {
+  width: 40px;
+}
+.content-foot {
+  background-color: rgb(43, 43, 43);
+}
+ .content-foot .foot-text{
+  padding: 25px 80px;
+  display: flex;
+  justify-content: space-between;
+}
+.content-foot .container p {
+  color: rgb(136, 136, 136);
+}
+.content-foot .container p span {
+  color: white;
+  font-weight: bold;
+}
+.content-foot .container .pay {
+  display: flex;
+  gap: 20px;
+}
+.content-foot .container .pay img {
+  width: 70px;
+  height: 40px;
+  object-fit: contain;
+  background-color: white;
+  padding: 10px 5px;
+}
+
+.p{
+font-size:20px
+}
+    .wrapper {
+  overflow: hidden;
+}
+.js-scroll-slider {
+  display: flex;
+  margin-bottom: 20px;
+}
+.js-scroll-slider__item {
+  flex-shrink: 0;
+  width: 200px;
+  margin-right: 20px;
+}
+@media screen and (min-width: 640px) {
+  .js-scroll-slider__item {
+    width: 400px;
+  }
+}
+
+/* テストページ設定 */
+body {
+  margin: 0;
+  padding: 50px 0;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+@media screen and (min-width: 640px) {
+  h1 {
+    margin-bottom: 100px;
+    font-size: 36px;
+  }
+}
+strong {
+  font-size: 150%;
+}
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: top;
+}
+.price {
+    font-weight: bold;
+    font-size: medium;
+}
+
+/* Don't display anything if price description is not present */
+.price_desc:empty{
+    display: none;
+}
+
+.price_desc{
+    font-size: smaller;
+}
+
+.price_desc:before {
+    content: ' (';
+}
+
+.price_desc:after {
+    content: ')';
+}
+
+a.add-btn{
+    color: black;
+}
+
+a.add-btn-2{
+    color: black;
+}
+
+.proceed-checkout-btn{
+    width: 200px;
+}
+
+.return-btn{
+    width: 200px;
+    color: black;
+}
+
+.product_title{
+    cursor: pointer;
+}
+
+.cart-product-title{
+    cursor: pointer;
+}
+
+.quantity{
+    margin: 8px;
+}
+
+.img-thumbnail{
+    width:200px;
+    height:200px;
+    display:inline-block;
+}
+
+.img-popup-thumbnail{
+    width: 240px;
+    height: 250px;
+}
+
+.img-container{
+    padding: 10px;
+    display: table;
+	table-layout: fixed;
+}
+
+.price-range{
+    margin: 10px;
+}
+
+.price-range-label{
+    margin: 2px;
+}
+
+
+/* Styling properties for the search bar */
+#searchInput{
+    width: 40%;
+    padding: 12px;
+    font-size: 15px;
+    margin-top: 8px;
+    border: none;
+}
+
+/* Styling properties for the search submit button */
+#searchBtn{
+    padding: 8px;
+    margin-top: 8px;
+    border: none;
+}
+
+/* Styling properties for the filter button */
+#filterBtn{
+    padding: 8px;
+    margin-top: 8px;
+    border: none;
+}
+
+#cart-link{
+    text-align: right;
+}
+
+
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+    background-color: #509c9e;
+    color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+

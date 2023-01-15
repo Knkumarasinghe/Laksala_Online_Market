@@ -1,0 +1,103 @@
+{{>header}}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Laksala</a>
+            
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="navbar navbar-expand-lg navbar-light bg-light">
+            <ul class="nav navbar-nav">
+                {{# if login}}
+                <li class="nav-item"><a class="nav-link" href="/orders/{{user.email}}">My Orders</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+                {{# if user.isadmin}}
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       >Manage Items<span class="caret"></span></a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="/admin/add">Add Items</a></li>
+                        <li><a href="/admin/update">Update/Delete Items</a></li>
+
+                    </ul>
+                </li>
+                {{/if}}
+
+                <li class="nav-item" ><a class="nav-link" href="/user/logout">Logout
+                </a></li>
+                {{else}}
+                <li class="nav-item"><a class="nav-link" href="/cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+                <li class="nav-item"><a class="nav-link" href="/user/signin">Sign In</a></li>
+                <li class="nav-item"><a class="nav-link" href="/user/signup">Register</a></li>
+                {{/if}}
+            </ul>
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div class="wrapper">
+<br>
+
+
+
+
+
+</div>
+
+ 
+
+   <img src="https://essstr.blob.core.windows.net/uiimg/Carousel/slide1.jpg" width="1550">
+
+
+
+<div class="container">
+ 
+<center>
+    <ig src="https://essstr.blob.core.windows.net/uiimg/PageHeader/ProductListingPageHeader.png" width="1500">
+
+</center>
+
+<div class="container">
+    {{#each product}}
+    <div class="row">
+        {{#each this}}
+        <div class="col-xs-6 col-md-4 img-container">
+            <img class="img-responsive inline-block img-thumbnail" src="{{this.imagePath}}" />
+
+            <div class="caption">
+                <a class="product_title" data-toggle="modal" data-target="#myModal">{{this.title}}</a>
+                <p><span class="price">${{this.price}}</span><span class="price_desc">{{this.price_description}}</span>
+                </p>
+                <p class="product_desc" hidden>{{this.product_description}}</p>
+                <p class="id" hidden>{{this._id}}</p>
+                <input class="quantity" type="number" name="quantity" value="1" min="1" max="50">
+                <a class="btn btn-warning add-btn" role="button">Add to Cart</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{/each}}
+    </br>
+    <p id="isPaginate" hidden>{{pagination}}</p>
+
+    <!-- Pagination -->
+    <nav aria-label="Page-navigation">
+        <ul class="pagination justify-content-center">
+        </ul>
+    </nav>
+
+</div>
+

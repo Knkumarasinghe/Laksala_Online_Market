@@ -1,0 +1,61 @@
+{{>header}}
+<img src="https://essstr.blob.core.windows.net/uiimg/PageHeader/ProductListingPageHeader.png" width="1550"></ig>
+
+<div class="container" style="background-color:#f7fcfa;">
+
+ 
+
+    <form class="admin_add_form" action="/products/add" enctype="multipart/form-data" method="post">
+
+     
+     <div class="form-group">
+        <br>
+            <label for="title" class="col-sm-2 col-form-label">Item Title</label>
+            <input type="text" class="form-control" placeholder="Title" name="title">
+        </div>
+ 
+        <div class="form-group">
+            
+            <label for="category" class="col-sm-2 col-form-label">Category</label>
+            <select name="category">
+                <option value="Groceries">Groceries</option>
+                <option value="vegetables_and_fruit">vegetables_and_fruit</option>
+                <option value="Food_items">Food_items</option>
+            </select>
+        </div>
+   
+ <div class="form-group">
+            <label for="product_description" class="col-sm-2 col-form-label">Item Description</label>
+            <textarea class="form-control" placeholder="Item Description" name="Description"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="image_name" class="col-sm-2 col-form-label">Image Name</label>
+            <input type="text" class="form-control" placeholder="Image" name="image_name">
+        </div>
+
+        <div class="form-group">
+            <label for="price" class="col-sm-2 col-form-label">Price</label>
+            <input type="text" class="form-control" placeholder="Price(Only Numbers)" name="price">
+        </div>
+
+       
+
+        <div class="form-group">
+            <label for="price_description" class="col-sm-2 col-form-label">Price Description</label>
+            <textarea class="form-control" placeholder="Price Description" name="price_description"></textarea>
+        </div>
+               <div class="form-group">
+            <label for="file" class="col-sm-2 col-form-label">Choose Item Photo</label>
+            <input type="file" name="file">
+        </div><br>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-success btn-lg btn-block">Add Item</button>
+        </div>
+       
+    </form>
+
+    <a href="/"  class="btn btn-warning  btn-lg btn-block" role="button">Back to Main</a>
+</div>
+
